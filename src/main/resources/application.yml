@@ -1,0 +1,35 @@
+server:
+  port: 8080
+  error:
+    include-message: always
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5332/room-exchange
+    username: postgres
+    password: 1947
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ekankm2@gmail.com
+    password: qadywnrxjbvqdobx
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: false
+  main:
+    web-application-type: servlet
+
